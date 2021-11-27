@@ -99,12 +99,14 @@
 		967388792751EDBA00AC9280 /* Nimble */ = {
 			isa = PBXGroup;
 			children = (
-				9673887A2751EDBA00AC9280 /* AppDelegate.swift */,
-				967388B62751F0A500AC9280 /* SceneDelegate.swift */,
-				9673887E2751EDBA00AC9280 /* ViewController.swift */,
-				967388802751EDBA00AC9280 /* Main.storyboard */,
+				967388C12752427100AC9280 /* Application */,
+				967388C02752426C00AC9280 /* Model */,
+				967388BF2752426200AC9280 /* View */,
+				967388BE2752425A00AC9280 /* ViewModel */,
+				967388BD2752423D00AC9280 /* Networking */,
+				967388BC2752423600AC9280 /* Common */,
+				967388BB2752422200AC9280 /* StoryBoard */,
 				967388832751EDC100AC9280 /* Assets.xcassets */,
-				967388852751EDC100AC9280 /* LaunchScreen.storyboard */,
 				967388882751EDC100AC9280 /* Info.plist */,
 			);
 			path = Nimble;
@@ -126,6 +128,60 @@
 				9673889E2751EDC200AC9280 /* Info.plist */,
 			);
 			path = NimbleUITests;
+			sourceTree = "<group>";
+		};
+		967388BB2752422200AC9280 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				967388852751EDC100AC9280 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		967388BC2752423600AC9280 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		967388BD2752423D00AC9280 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		967388BE2752425A00AC9280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		967388BF2752426200AC9280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				967388802751EDBA00AC9280 /* Main.storyboard */,
+				9673887E2751EDBA00AC9280 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		967388C02752426C00AC9280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		967388C12752427100AC9280 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				967388B62751F0A500AC9280 /* SceneDelegate.swift */,
+				9673887A2751EDBA00AC9280 /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

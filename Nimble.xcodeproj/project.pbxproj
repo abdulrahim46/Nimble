@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9673887B2751EDBA00AC9280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673887A2751EDBA00AC9280 /* AppDelegate.swift */; };
-		9673887D2751EDBA00AC9280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673887C2751EDBA00AC9280 /* SceneDelegate.swift */; };
 		9673887F2751EDBA00AC9280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673887E2751EDBA00AC9280 /* ViewController.swift */; };
 		967388822751EDBA00AC9280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967388802751EDBA00AC9280 /* Main.storyboard */; };
 		967388842751EDC100AC9280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967388832751EDC100AC9280 /* Assets.xcassets */; };
 		967388872751EDC100AC9280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967388852751EDC100AC9280 /* LaunchScreen.storyboard */; };
 		967388922751EDC200AC9280 /* NimbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388912751EDC200AC9280 /* NimbleTests.swift */; };
 		9673889D2751EDC200AC9280 /* NimbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673889C2751EDC200AC9280 /* NimbleUITests.swift */; };
+		967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388B62751F0A500AC9280 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		967388772751EDBA00AC9280 /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9673887A2751EDBA00AC9280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9673887C2751EDBA00AC9280 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9673887E2751EDBA00AC9280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		967388812751EDBA00AC9280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		967388832751EDC100AC9280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		967388982751EDC200AC9280 /* NimbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9673889C2751EDC200AC9280 /* NimbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleUITests.swift; sourceTree = "<group>"; };
 		9673889E2751EDC200AC9280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967388B62751F0A500AC9280 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9673887A2751EDBA00AC9280 /* AppDelegate.swift */,
-				9673887C2751EDBA00AC9280 /* SceneDelegate.swift */,
+				967388B62751F0A500AC9280 /* SceneDelegate.swift */,
 				9673887E2751EDBA00AC9280 /* ViewController.swift */,
 				967388802751EDBA00AC9280 /* Main.storyboard */,
 				967388832751EDC100AC9280 /* Assets.xcassets */,
@@ -260,7 +260,7 @@
 			files = (
 				9673887F2751EDBA00AC9280 /* ViewController.swift in Sources */,
 				9673887B2751EDBA00AC9280 /* AppDelegate.swift in Sources */,
-				9673887D2751EDBA00AC9280 /* SceneDelegate.swift in Sources */,
+				967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Nimble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.Nimble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Nimble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.Nimble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

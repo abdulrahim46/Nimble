@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Nimble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="thc-HJ-JlV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yil-OE-zy6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nimble-logo" translatesAutoresizingMaskIntoConstraints="NO" id="IAl-Bu-tDr">
+                                        <rect key="frame" x="87" y="167" width="240" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Vur-nA-1gg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-9v-t5l">
+                                        <rect key="frame" x="24" y="323" width="366" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="owv-5A-kTe"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHz-Z1-7dG">
+                                        <rect key="frame" x="24" y="399" width="366" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="aRU-BH-uFf"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTX-ig-RrX">
+                                        <rect key="frame" x="24" y="475" width="366" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="bcC-NB-cw5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="cBc-9v-t5l" firstAttribute="leading" secondItem="Yil-OE-zy6" secondAttribute="leading" constant="24" id="Lvj-Ef-IiX"/>
+                                    <constraint firstAttribute="trailing" secondItem="IAl-Bu-tDr" secondAttribute="trailing" constant="87" id="Mgx-UL-YRW"/>
+                                    <constraint firstItem="iTX-ig-RrX" firstAttribute="leading" secondItem="Yil-OE-zy6" secondAttribute="leading" constant="24" id="QiF-Mf-6EP"/>
+                                    <constraint firstItem="IAl-Bu-tDr" firstAttribute="top" secondItem="Yil-OE-zy6" secondAttribute="top" constant="167" id="Za9-8m-S07"/>
+                                    <constraint firstAttribute="trailing" secondItem="cBc-9v-t5l" secondAttribute="trailing" constant="24" id="bNg-Pz-vKh"/>
+                                    <constraint firstItem="IAl-Bu-tDr" firstAttribute="leading" secondItem="Yil-OE-zy6" secondAttribute="leading" constant="87" id="cQp-re-Ns3"/>
+                                    <constraint firstItem="iTX-ig-RrX" firstAttribute="top" secondItem="BHz-Z1-7dG" secondAttribute="bottom" constant="20" id="iV3-8x-Yc5"/>
+                                    <constraint firstAttribute="trailing" secondItem="BHz-Z1-7dG" secondAttribute="trailing" constant="24" id="kYd-lK-m98"/>
+                                    <constraint firstItem="BHz-Z1-7dG" firstAttribute="leading" secondItem="Yil-OE-zy6" secondAttribute="leading" constant="24" id="lnE-PC-RHk"/>
+                                    <constraint firstItem="BHz-Z1-7dG" firstAttribute="top" secondItem="cBc-9v-t5l" secondAttribute="bottom" constant="20" id="pkz-ss-wLh"/>
+                                    <constraint firstAttribute="trailing" secondItem="iTX-ig-RrX" secondAttribute="trailing" constant="24" id="tU5-G5-IXv"/>
+                                    <constraint firstItem="cBc-9v-t5l" firstAttribute="top" secondItem="IAl-Bu-tDr" secondAttribute="bottom" constant="116" id="w60-yw-Y9Q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="thc-HJ-JlV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IlA-31-fMg"/>
+                            <constraint firstItem="Yil-OE-zy6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nu7-ad-Mb5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yil-OE-zy6" secondAttribute="trailing" id="SCT-UE-nc1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="thc-HJ-JlV" secondAttribute="trailing" id="VYV-lC-Q7e"/>
+                            <constraint firstItem="Yil-OE-zy6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WII-Vx-klt"/>
+                            <constraint firstItem="thc-HJ-JlV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bOQ-Lc-ff6"/>
+                            <constraint firstAttribute="bottom" secondItem="thc-HJ-JlV" secondAttribute="bottom" id="iZU-Zu-squ"/>
+                            <constraint firstAttribute="bottom" secondItem="Yil-OE-zy6" secondAttribute="bottom" id="vzb-gg-m8m"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="97" y="88"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="812"/>
+        <image name="nimble-logo" width="202" height="48"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

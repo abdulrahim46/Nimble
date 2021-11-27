@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="LDE-61-ozb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="LDE-61-ozb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nimble-logo" translatesAutoresizingMaskIntoConstraints="NO" id="U57-ca-Dzg">
@@ -31,8 +31,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="U57-ca-Dzg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6qE-ol-NCf"/>
-                            <constraint firstItem="LDE-61-ozb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="97D-eg-zfN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LDE-61-ozb" secondAttribute="trailing" id="CMo-CU-JOo"/>
+                            <constraint firstItem="LDE-61-ozb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="97D-eg-zfN"/>
+                            <constraint firstAttribute="trailing" secondItem="LDE-61-ozb" secondAttribute="trailing" id="CMo-CU-JOo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U57-ca-Dzg" secondAttribute="trailing" constant="87" id="CZg-FC-bqT"/>
                             <constraint firstItem="U57-ca-Dzg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bQW-eS-bPb"/>
                             <constraint firstAttribute="bottom" secondItem="LDE-61-ozb" secondAttribute="bottom" id="dfc-8d-Q0w"/>

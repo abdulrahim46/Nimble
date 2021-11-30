@@ -16,6 +16,9 @@
 		9673889D2751EDC200AC9280 /* NimbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673889C2751EDC200AC9280 /* NimbleUITests.swift */; };
 		967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388B62751F0A500AC9280 /* SceneDelegate.swift */; };
 		967388C32752882400AC9280 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388C22752882400AC9280 /* LoginViewControllerTest.swift */; };
+		967388DD27562CCD00AC9280 /* SurveyContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388DC27562CCD00AC9280 /* SurveyContainerVC.swift */; };
+		967388E227562CFC00AC9280 /* SurveyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388E127562CFC00AC9280 /* SurveyPageViewController.swift */; };
+		967388E727562D0900AC9280 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388E627562D0900AC9280 /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		9673889E2751EDC200AC9280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967388B62751F0A500AC9280 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		967388C22752882400AC9280 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		967388DC27562CCD00AC9280 /* SurveyContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyContainerVC.swift; sourceTree = "<group>"; };
+		967388E127562CFC00AC9280 /* SurveyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageViewController.swift; sourceTree = "<group>"; };
+		967388E627562D0900AC9280 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,9 @@
 			children = (
 				967388802751EDBA00AC9280 /* Main.storyboard */,
 				9673887E2751EDBA00AC9280 /* ViewController.swift */,
+				967388DC27562CCD00AC9280 /* SurveyContainerVC.swift */,
+				967388E127562CFC00AC9280 /* SurveyPageViewController.swift */,
+				967388E627562D0900AC9280 /* SurveyViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,9 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967388DD27562CCD00AC9280 /* SurveyContainerVC.swift in Sources */,
 				9673887F2751EDBA00AC9280 /* ViewController.swift in Sources */,
 				9673887B2751EDBA00AC9280 /* AppDelegate.swift in Sources */,
 				967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */,
+				967388E727562D0900AC9280 /* SurveyViewController.swift in Sources */,
+				967388E227562CFC00AC9280 /* SurveyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

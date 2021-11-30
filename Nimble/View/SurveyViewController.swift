@@ -21,7 +21,7 @@ class SurveyViewController: UIViewController {
     
     var survey: Survey?
     
-    
+    //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class SurveyViewController: UIViewController {
     }
     
     
-    
+    //MARK:- Action methods
     
     @IBAction func navButtonAction(_ sender: Any) {
         

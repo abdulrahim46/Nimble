@@ -340,10 +340,10 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="pBO-cP-Fpf" id="5sm-1g-Lcp"/>
-                        <outlet property="loadingAnimationView" destination="7VZ-Oq-2zJ" id="lu8-0U-RB5"/>
-                        <outlet property="profileImageView" destination="IGs-Bd-ZVO" id="erH-4Y-UJ1"/>
-                        <outlet property="surveyPageControl" destination="0fn-fb-GbC" id="FiA-fX-qzg"/>
+                        <outlet property="dateLabel" destination="pBO-cP-Fpf" id="rAW-ZI-r1C"/>
+                        <outlet property="loadingAnimationView" destination="7VZ-Oq-2zJ" id="mpo-qT-gJa"/>
+                        <outlet property="profileImageView" destination="IGs-Bd-ZVO" id="Ep2-Et-2aw"/>
+                        <outlet property="surveyPageControl" destination="0fn-fb-GbC" id="UST-cO-v5J"/>
                         <segue destination="aTp-UB-LCg" kind="custom" id="8zR-u9-qqz"/>
                     </connections>
                 </viewController>
@@ -381,6 +381,7 @@
                                 <state key="normal" image="ActionButton"/>
                                 <connections>
                                     <action selector="actionDidTapped:" destination="s0k-qB-nXB" eventType="touchUpInside" id="T7J-QW-msu"/>
+                                    <action selector="navButtonAction:" destination="s0k-qB-nXB" eventType="touchUpInside" id="qZU-af-uUR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1Z-W6-Vsp">
@@ -414,9 +415,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coverImageView" destination="8jM-Va-MoT" id="RFq-7c-2GQ"/>
-                        <outlet property="descriptionLabel" destination="S1Z-W6-Vsp" id="dsX-Ix-3Vd"/>
-                        <outlet property="titleLabel" destination="sGO-3n-Hbl" id="1sx-vi-JZj"/>
+                        <outlet property="coverImageView" destination="8jM-Va-MoT" id="q3Z-8g-OJg"/>
+                        <outlet property="descriptionLabel" destination="S1Z-W6-Vsp" id="zfz-tz-mZt"/>
+                        <outlet property="titleLabel" destination="sGO-3n-Hbl" id="rJy-dt-a7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXR-bW-qwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

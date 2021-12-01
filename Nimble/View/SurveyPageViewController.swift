@@ -17,6 +17,29 @@ class SurveyPageViewController: UIPageViewController {
         dataSource = self
         delegate = self
     }
+    
+    func updatePageViewWith(_ surveyList: [Survey]) {
+        self.surveyList = surveyList
+        
+        if let firstViewController = viewControllerAtIndex(index: 0) {
+            setViewControllers([firstViewController], direction: .forward, animated: false, completion: nil)
+        }
+    }
+    
+    func viewControllerAtIndex(index: Int) -> UIViewController? {
+        if index < 0 || index > surveyList!.count - 1 {
+          return nil
+        }
+        
+        if let survey = surveyList?[index],
+           let viewController = storyboard?.instantiateViewController(withIdentifier: "SurveyViewController") as? SurveyViewController {
+            viewController.survey = survey
+            viewController.view.tag = index
+            return viewController
+        }
+        
+        return nil
+    }
 }
 
 

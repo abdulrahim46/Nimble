@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rhZ-KT-nEU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -81,7 +81,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEr-bM-NTL"/>
+                                            <action selector="loginDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1f-2X-Lfd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -115,15 +115,16 @@
                             <constraint firstAttribute="bottom" secondItem="Yil-OE-zy6" secondAttribute="bottom" id="vzb-gg-m8m"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="N3C-n8-GHg"/>
                     <connections>
                         <outlet property="emailTextField" destination="cBc-9v-t5l" id="gbr-eL-ntj"/>
-                        <outlet property="loginButton" destination="iTX-ig-RrX" id="WDl-58-pbZ"/>
+                        <outlet property="loginButton" destination="iTX-ig-RrX" id="nK0-0g-dzd"/>
                         <outlet property="passwordTextField" destination="BHz-Z1-7dG" id="JOY-NM-GMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="88"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="87.723214285714278"/>
         </scene>
         <!--Survey ContainerVC-->
         <scene sceneID="yHl-1b-acU">
@@ -227,105 +228,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Fr-9O-idb">
-                                        <rect key="frame" x="20" y="783" width="374" height="51"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-m0-RFq">
-                                                <rect key="frame" x="0.0" y="0.0" width="324" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giF-Sk-OrZ">
-                                                <rect key="frame" x="0.0" y="30.5" width="224" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="giF-Sk-OrZ" secondAttribute="trailing" constant="150" id="dJH-kx-H7o"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sn1-m0-RFq" secondAttribute="trailing" constant="50" id="rxu-rz-At5"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U9Q-gs-oxh">
-                                        <rect key="frame" x="20" y="716" width="374" height="51"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-zK-dqf">
-                                                <rect key="frame" x="0.0" y="0.0" width="274" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heM-Lp-0cr">
-                                                <rect key="frame" x="0.0" y="30.5" width="174" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="heM-Lp-0cr" secondAttribute="trailing" constant="200" id="oaH-5R-S0Q"/>
-                                            <constraint firstAttribute="trailing" secondItem="mQG-zK-dqf" secondAttribute="trailing" constant="100" id="sMA-mX-2t5"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-VP-LOh">
-                                        <rect key="frame" x="20" y="675.5" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="yXV-do-1vI" firstAttribute="bottom" secondItem="6hH-dE-rQL" secondAttribute="bottom" id="F0D-Lf-MHb"/>
-                                    <constraint firstAttribute="trailing" secondItem="U9Q-gs-oxh" secondAttribute="trailing" constant="20" id="HDs-b1-q5e"/>
-                                    <constraint firstAttribute="bottom" secondItem="2Fr-9O-idb" secondAttribute="bottom" constant="62" id="K2U-Bu-bWO"/>
                                     <constraint firstAttribute="trailing" secondItem="yXV-do-1vI" secondAttribute="trailing" constant="20" id="KqT-5a-dcg"/>
-                                    <constraint firstItem="U9Q-gs-oxh" firstAttribute="top" secondItem="fv5-VP-LOh" secondAttribute="bottom" constant="20" id="dK7-vm-9V4"/>
                                     <constraint firstItem="6hH-dE-rQL" firstAttribute="leading" secondItem="7VZ-Oq-2zJ" secondAttribute="leading" constant="20" id="kJ2-c3-zOL"/>
-                                    <constraint firstItem="2Fr-9O-idb" firstAttribute="top" secondItem="U9Q-gs-oxh" secondAttribute="bottom" constant="16" id="oAZ-0O-tIc"/>
-                                    <constraint firstItem="fv5-VP-LOh" firstAttribute="leading" secondItem="7VZ-Oq-2zJ" secondAttribute="leading" constant="20" symbolic="YES" id="pee-Dr-fzG"/>
-                                    <constraint firstItem="2Fr-9O-idb" firstAttribute="leading" secondItem="7VZ-Oq-2zJ" secondAttribute="leading" constant="20" symbolic="YES" id="rMv-IN-piT"/>
                                     <constraint firstItem="6hH-dE-rQL" firstAttribute="top" secondItem="7VZ-Oq-2zJ" secondAttribute="top" constant="60" id="rlC-Ll-HPX"/>
-                                    <constraint firstItem="U9Q-gs-oxh" firstAttribute="leading" secondItem="7VZ-Oq-2zJ" secondAttribute="leading" constant="20" id="tfs-Lh-7c8"/>
-                                    <constraint firstAttribute="trailing" secondItem="2Fr-9O-idb" secondAttribute="trailing" constant="20" id="uEy-Ad-YO5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -358,22 +267,21 @@
                         <outlet property="loadingAnimationView" destination="7VZ-Oq-2zJ" id="mpo-qT-gJa"/>
                         <outlet property="profileImageView" destination="IGs-Bd-ZVO" id="Ep2-Et-2aw"/>
                         <outlet property="surveyPageControl" destination="0fn-fb-GbC" id="UST-cO-v5J"/>
-                        <segue destination="aTp-UB-LCg" kind="custom" id="8zR-u9-qqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfU-cX-4DR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="88"/>
+            <point key="canvasLocation" x="1747.826086956522" y="87.723214285714278"/>
         </scene>
         <!--Survey Page View Controller-->
         <scene sceneID="yA4-1e-dtF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVX-f0-xyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <pageViewController storyboardIdentifier="SurveyPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aTp-UB-LCg" customClass="SurveyPageViewController" customModule="Nimble" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HTE-eh-1wV"/>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CVX-f0-xyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="88"/>
+            <point key="canvasLocation" x="2550.7246376811595" y="87.723214285714278"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="jYq-wX-oU2">
@@ -436,7 +344,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXR-bW-qwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="88"/>
+            <point key="canvasLocation" x="3297.1014492753625" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g3Y-X7-E39">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rhZ-KT-nEU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8A0-cb-FCf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="10Z-bW-vrK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29C-He-g0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>

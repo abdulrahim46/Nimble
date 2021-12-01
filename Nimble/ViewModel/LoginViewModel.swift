@@ -10,25 +10,21 @@ import Alamofire
 
 class LoginViewModel {
     
-    
-    
     func getAccessToken(email:  String, password: String, completion: @escaping (Bool) -> ()) {
         let parameters: [String: String] = ["grant_type": "password",
                                             "email": email,
                                             "password": password,
-                                            "client_id": "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE",
-                                            "client_secret": "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"]
+                                            "client_id": Constants.API.apiKey,
+                                            "client_secret": Constants.API.secret]
         
         AF.request("https://survey-api.nimblehq.co/api/v1/oauth/token", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate()
             .responseDecodable(of: ResponseData<LoginCredential>.self) { (response) in
                 switch response.result {
                 case .success(let responseData):
+                    print(responseData)
                     LoginSession.share.credential = responseData.data
                     completion(true)
-//                    DispatchQueue.main.async {
-//                        self.showSurveyList()
-//                    }
                 case .failure(let error):
                     print(error)
                     completion(false)

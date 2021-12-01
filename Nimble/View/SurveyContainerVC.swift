@@ -6,23 +6,34 @@
 //
 
 import UIKit
+import SkeletonView
+import AlamofireImage
 
 class SurveyContainerVC: UIViewController {
     
     //MARK:- View  & properties
     
     @IBOutlet weak var loadingAnimationView: UIView!
-    
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var surveyPageControl: UIPageControl!
+    
+    var surveyPageViewController: SurveyPageViewController!
+    
+    var userProfile: UserProfile?
+    var surveys: [Survey]?
+    let viewModel =  SurveyViewModel()
     
     
     //MARK:- Lifecycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let gradient = SkeletonGradient(baseColor: UIColor.darkGray, secondaryColor: UIColor.gray)
+        view.showAnimatedGradientSkeleton(usingGradient: gradient)
+        profileImageView.layer.cornerRadius = 18
+        fetchProfile()
+        fetchSurveyList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +46,50 @@ class SurveyContainerVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    private func fetchProfile() {
+        viewModel.getUserProfile(completion: { [weak self] response in
+            if let response = response {
+                self?.userProfile = response
+                self?.setupProfile()
+            }
+            self?.view.stopSkeletonAnimation()
+        })
+    }
+    
+    
+    private func fetchSurveyList()  {
+        viewModel.getSurveyList(completion: { [weak self] response in
+            if let response = response {
+                self?.surveys = response
+                self?.setupSurvey()
+            }
+            self?.view.stopSkeletonAnimation()
+        })
+    }
+    
+    
+    private func setupProfile() {
+        profileImageView.af.setImage(withURL: URL(string: userProfile?.avatarURL ?? "")!, placeholderImage: UIImage(named: "ProfilePlaceholder"))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d"
+        dateLabel.text = dateFormatter.string(from: Date())
+    }
+    
+    private func setupSurvey() {
+        surveyPageControl.numberOfPages = surveys?.count ?? 0
+        if let surveys = surveys {
+            surveyPageViewController.updatePageViewWith(surveys)
+            //show()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? SurveyPageViewController {
+            
+            surveyPageViewController = controller
+            surveyPageViewController.surveyPageDelegate = self
+        }
+    }    
 }
 
 

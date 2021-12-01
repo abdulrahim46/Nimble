@@ -30,6 +30,7 @@
 		9673891C27563EE600AC9280 /* OAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673891B27563EE600AC9280 /* OAuthenticator.swift */; };
 		967389212756417600AC9280 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389202756417600AC9280 /* LoginViewModel.swift */; };
 		967389262756418600AC9280 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389252756418600AC9280 /* SurveyViewModel.swift */; };
+		967389372757555F00AC9280 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389362757555F00AC9280 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		9673891B27563EE600AC9280 /* OAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthenticator.swift; sourceTree = "<group>"; };
 		967389202756417600AC9280 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		967389252756418600AC9280 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		967389362757555F00AC9280 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_NimbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C616F80CB070A9DF695CE3 /* Pods-Nimble-NimbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble-NimbleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nimble-NimbleUITests/Pods-Nimble-NimbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				967388F827563B0600AC9280 /* LoginCredential.swift */,
 				9673890227563B8C00AC9280 /* Survey.swift */,
 				9673891627563E8400AC9280 /* ResponseData.swift */,
+				967389362757555F00AC9280 /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			files = (
 				967389262756418600AC9280 /* SurveyViewModel.swift in Sources */,
 				9673890327563B8C00AC9280 /* Survey.swift in Sources */,
+				967389372757555F00AC9280 /* UserProfile.swift in Sources */,
 				9673891C27563EE600AC9280 /* OAuthenticator.swift in Sources */,
 				967388DD27562CCD00AC9280 /* SurveyContainerVC.swift in Sources */,
 				9673887F2751EDBA00AC9280 /* ViewController.swift in Sources */,

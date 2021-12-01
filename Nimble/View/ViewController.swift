@@ -46,13 +46,15 @@ class ViewController: UIViewController {
     }
     
     func enableLoginButton() {
-        loginButton.isEnabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+//        loginButton.isEnabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
     }
     
     
     @IBAction func loginDidTapped(_ sender: Any) {
+        print("lksnklgnlsk")
         if let email = emailTextField.text, let password = passwordTextField.text {
             viewModel.getAccessToken(email: email , password: password, completion: { [weak self] res in
+                print(res)
                 if res {
                     DispatchQueue.main.async {
                         self?.showSurveyList()
@@ -64,14 +66,11 @@ class ViewController: UIViewController {
     
     
     func showSurveyList() {
-        guard let surveyContainerViewController = storyboard?.instantiateViewController(withIdentifier: "SurveyContainerVC") as? SurveyContainerVC else {
-            assertionFailure("No view controler ID SurveyContainerVC")
-            
-            return
-        }
-        
-        let navigationController = UINavigationController(rootViewController: surveyContainerViewController)
-        UIApplication.shared.delegate?.window??.rootViewController = navigationController
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "SurveyContainerVC") as! SurveyContainerVC
+        //vc.mobile = mobile
+        self.navigationController?.pushViewController(vc, animated: true)
+       // UIApplication.shared.delegate?.window??.rootViewController = navigationController
     }
 }
 

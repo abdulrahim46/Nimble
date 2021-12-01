@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class SurveyViewController: UIViewController {
     
@@ -32,7 +33,7 @@ class SurveyViewController: UIViewController {
         
         guard let survey = survey else { return }
         
-        //coverImageView.af.setImage(withURL: URL(string: survey.coverImageURL)!)
+        coverImageView.af.setImage(withURL: URL(string: survey.coverImageURL)!)
         titleLabel.text = survey.title
         descriptionLabel.text = survey.description
     }

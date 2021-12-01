@@ -53,6 +53,7 @@ class SurveyContainerVC: UIViewController {
                 self?.setupProfile()
             }
             self?.view.stopSkeletonAnimation()
+            self?.loadingAnimationView.isHidden = true
         })
     }
     
@@ -64,6 +65,7 @@ class SurveyContainerVC: UIViewController {
                 self?.setupSurvey()
             }
             self?.view.stopSkeletonAnimation()
+            self?.loadingAnimationView.isHidden = true
         })
     }
     
@@ -79,7 +81,6 @@ class SurveyContainerVC: UIViewController {
         surveyPageControl.numberOfPages = surveys?.count ?? 0
         if let surveys = surveys {
             surveyPageViewController.updatePageViewWith(surveys)
-            //show()
         }
     }
     

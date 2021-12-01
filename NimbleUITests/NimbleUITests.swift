@@ -29,5 +29,26 @@ class NimbleUITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.staticTexts["Log in"]/*[[".buttons[\"Log in\"].staticTexts[\"Log in\"]",".staticTexts[\"Log in\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
-
+    func test_swiping_images_of_surveys(){
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+    
+        let scrollViewsQuery = app.scrollViews
+        let element = scrollViewsQuery.children(matching: .other).element.children(matching: .other).element
+        element.swipeLeft()
+        element.swipeRight()
+        element.swipeLeft()
+        element.swipeRight()
+        
+        let actionbuttonButton = scrollViewsQuery.otherElements.buttons["ActionButton"]
+        actionbuttonButton.tap()
+        
+        let backButton = app.navigationBars["Nimble.SurveyDetailView"].buttons["Back"]
+        backButton.tap()
+        element.swipeLeft()
+        actionbuttonButton.tap()
+        backButton.tap()
+        
+    }
 }

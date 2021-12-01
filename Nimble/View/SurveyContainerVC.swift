@@ -71,7 +71,9 @@ class SurveyContainerVC: UIViewController {
     
     
     private func setupProfile() {
-        profileImageView.af.setImage(withURL: URL(string: userProfile?.avatarURL ?? "")!, placeholderImage: UIImage(named: "ProfilePlaceholder"))
+        if let imageUrl = userProfile?.avatarURL {
+            profileImageView.af.setImage(withURL: URL(string: imageUrl)!, placeholderImage: UIImage(named: "ProfilePlaceholder"))
+        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMM d"
         dateLabel.text = dateFormatter.string(from: Date())
@@ -90,7 +92,7 @@ class SurveyContainerVC: UIViewController {
             surveyPageViewController = controller
             surveyPageViewController.surveyPageDelegate = self
         }
-    }    
+    }
 }
 
 

@@ -397,7 +397,6 @@
                                 </constraints>
                                 <state key="normal" image="ActionButton"/>
                                 <connections>
-                                    <action selector="actionDidTapped:" destination="s0k-qB-nXB" eventType="touchUpInside" id="T7J-QW-msu"/>
                                     <action selector="navButtonAction:" destination="s0k-qB-nXB" eventType="touchUpInside" id="qZU-af-uUR"/>
                                 </connections>
                             </button>

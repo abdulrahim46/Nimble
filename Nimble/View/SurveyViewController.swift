@@ -14,9 +14,7 @@ class SurveyViewController: UIViewController {
     //MARK:- View  & properties
     
     @IBOutlet weak var coverImageView: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     

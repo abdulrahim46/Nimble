@@ -68,9 +68,7 @@ class ViewController: UIViewController {
     func showSurveyList() {
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "SurveyContainerVC") as! SurveyContainerVC
-        //vc.mobile = mobile
         self.navigationController?.pushViewController(vc, animated: true)
-       // UIApplication.shared.delegate?.window??.rootViewController = navigationController
     }
 }
 

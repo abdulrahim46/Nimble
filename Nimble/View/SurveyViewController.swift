@@ -42,11 +42,9 @@ class SurveyViewController: UIViewController {
     //MARK:- Action methods
     
     @IBAction func navButtonAction(_ sender: Any) {
-        
-        
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "SurveyDetailViewController") as! SurveyDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-    
 }
 

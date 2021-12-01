@@ -441,6 +441,21 @@
             </objects>
             <point key="canvasLocation" x="3297.1014492753625" y="87.723214285714278"/>
         </scene>
+        <!--Survey Detail View Controller-->
+        <scene sceneID="aig-WL-YTL">
+            <objects>
+                <viewController storyboardIdentifier="SurveyDetailViewController" id="YGD-xi-2Jd" customClass="SurveyDetailViewController" customModule="Nimble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pZ2-OQ-QjV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ibn-Tm-rWi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vsc-Ox-bwF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4074" y="87"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="g3Y-X7-E39">
             <objects>

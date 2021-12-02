@@ -11,6 +11,7 @@ import Alamofire
 class LoginViewModel {
     
     func getAccessToken(email:  String, password: String, completion: @escaping (Bool) -> ()) {
+        Connectivity.checkNetworkConnectivity()
         let parameters: [String: String] = ["grant_type": "password",
                                             "email": email,
                                             "password": password,

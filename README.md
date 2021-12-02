@@ -74,3 +74,14 @@ is a structural design pattern that separates objects into three distinct groups
 - XCTestCase for unit tests and UI Tests.
 - Xcode Instruments for memory leaks and allocations.
 
+
+## 📱 Screenshots
+
+<p float="left"> 
+<img src="/Documentation/sim1.png" width="200">
+<img src="/Documentation/sim2.png" width="200">
+<img src="/Documentation/sim3.png" width="200">
+<img src="/Documentation/sim4.png" width="200">
+<img src="/Documentation/sim5.png" width="200">
+<img src="/Documentation/sim6.png" width="200">
+</p>

@@ -32,6 +32,12 @@
 		967389262756418600AC9280 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389252756418600AC9280 /* SurveyViewModel.swift */; };
 		967389372757555F00AC9280 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389362757555F00AC9280 /* UserProfile.swift */; };
 		967389692757DB5B00AC9280 /* SurveyDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389682757DB5B00AC9280 /* SurveyDetalViewController.swift */; };
+		9673898D275843B300AC9280 /* SurveyAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 96738988275843B300AC9280 /* SurveyAPIResponse.json */; };
+		9673898E275843B300AC9280 /* LoginCredential.json in Resources */ = {isa = PBXBuildFile; fileRef = 96738989275843B300AC9280 /* LoginCredential.json */; };
+		9673898F275843B300AC9280 /* UserProfile.json in Resources */ = {isa = PBXBuildFile; fileRef = 9673898A275843B300AC9280 /* UserProfile.json */; };
+		96738990275843B300AC9280 /* LoginAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9673898B275843B300AC9280 /* LoginAPIResponse.json */; };
+		96738991275843B300AC9280 /* Survey.json in Resources */ = {isa = PBXBuildFile; fileRef = 9673898C275843B300AC9280 /* Survey.json */; };
+		967389AB275845D500AC9280 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389AA275845D500AC9280 /* MockedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,12 @@
 		967389252756418600AC9280 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
 		967389362757555F00AC9280 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		967389682757DB5B00AC9280 /* SurveyDetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetalViewController.swift; sourceTree = "<group>"; };
+		96738988275843B300AC9280 /* SurveyAPIResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurveyAPIResponse.json; sourceTree = "<group>"; };
+		96738989275843B300AC9280 /* LoginCredential.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginCredential.json; sourceTree = "<group>"; };
+		9673898A275843B300AC9280 /* UserProfile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserProfile.json; sourceTree = "<group>"; };
+		9673898B275843B300AC9280 /* LoginAPIResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginAPIResponse.json; sourceTree = "<group>"; };
+		9673898C275843B300AC9280 /* Survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Survey.json; sourceTree = "<group>"; };
+		967389AA275845D500AC9280 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_NimbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C616F80CB070A9DF695CE3 /* Pods-Nimble-NimbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble-NimbleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nimble-NimbleUITests/Pods-Nimble-NimbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +195,7 @@
 		967388902751EDC200AC9280 /* NimbleTests */ = {
 			isa = PBXGroup;
 			children = (
+				96738987275843B300AC9280 /* Resources */,
 				967388912751EDC200AC9280 /* NimbleTests.swift */,
 				967388932751EDC200AC9280 /* Info.plist */,
 				967388C22752882400AC9280 /* LoginViewControllerTest.swift */,
@@ -266,6 +279,19 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		96738987275843B300AC9280 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96738988275843B300AC9280 /* SurveyAPIResponse.json */,
+				96738989275843B300AC9280 /* LoginCredential.json */,
+				9673898A275843B300AC9280 /* UserProfile.json */,
+				9673898B275843B300AC9280 /* LoginAPIResponse.json */,
+				9673898C275843B300AC9280 /* Survey.json */,
+				967389AA275845D500AC9280 /* MockedData.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +322,7 @@
 				967388892751EDC200AC9280 /* Sources */,
 				9673888A2751EDC200AC9280 /* Frameworks */,
 				9673888B2751EDC200AC9280 /* Resources */,
+				33CC1C8DDE764C7C8437479F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +411,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9673898F275843B300AC9280 /* UserProfile.json in Resources */,
+				96738991275843B300AC9280 /* Survey.json in Resources */,
+				9673898E275843B300AC9280 /* LoginCredential.json in Resources */,
+				9673898D275843B300AC9280 /* SurveyAPIResponse.json in Resources */,
+				96738990275843B300AC9280 /* LoginAPIResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +490,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		33CC1C8DDE764C7C8437479F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbleTests/Pods-NimbleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbleTests/Pods-NimbleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbleTests/Pods-NimbleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6DAB5BD1D4242046E062D8D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,6 +578,7 @@
 			files = (
 				967388C32752882400AC9280 /* LoginViewControllerTest.swift in Sources */,
 				967388922751EDC200AC9280 /* NimbleTests.swift in Sources */,
+				967389AB275845D500AC9280 /* MockedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

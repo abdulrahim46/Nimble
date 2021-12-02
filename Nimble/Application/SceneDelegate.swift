@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             guard let surveyContainerViewController = storyboard.instantiateViewController(withIdentifier: "SurveyContainerVC") as? SurveyContainerVC else {
                 assertionFailure("No view controler ID SurveyContainerVC")
                 
-                return 
+                return
             }
             
             let navigationController = UINavigationController(rootViewController: surveyContainerViewController)

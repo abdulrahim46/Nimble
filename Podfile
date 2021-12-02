@@ -14,6 +14,9 @@ target 'Nimble' do
   target 'NimbleTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Alamofire', '~> 5.2'
+    pod 'KeychainAccess'
+    pod 'Mocker', '~> 2.2.0'
   end
 
   target 'NimbleUITests' do

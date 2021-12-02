@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var loginButton: UIButton!
     
+    
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             let clearPlaceHolderText = NSAttributedString(string: "Email",
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     
     let viewModel = LoginViewModel()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
@@ -46,12 +48,11 @@ class ViewController: UIViewController {
     }
     
     func enableLoginButton() {
-//        loginButton.isEnabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+       
     }
     
     
     @IBAction func loginDidTapped(_ sender: Any) {
-        print("lksnklgnlsk")
         if let email = emailTextField.text, let password = passwordTextField.text {
             viewModel.getAccessToken(email: email , password: password, completion: { [weak self] res in
                 print(res)

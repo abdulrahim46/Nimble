@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         setupLoadingIndicator()
+        setupKeyboard()
     }
     
     private func setupLoadingIndicator() {
@@ -51,9 +52,27 @@ class ViewController: UIViewController {
         ])
     }
     
+    func setupKeyboard(){
+        let bar = UIToolbar()
+        let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        if #available(iOS 14.0, *) {
+            bar.items = [.flexibleSpace(),done]
+        } else {
+            bar.items = [done]
+        }
+        bar.sizeToFit()
+        passwordTextField.inputAccessoryView = bar
+        emailTextField.inputAccessoryView = bar
+    }
+    
     //MARK:- Action methods
     
+    @objc func didTapDone(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     @IBAction func loginDidTapped(_ sender: Any) {
+        checkValidation()
         loadingIndicator.startAnimating()
         if let email = emailTextField.text, let password = passwordTextField.text {
             viewModel.getAccessToken(email: email , password: password, completion: { [weak self] res in
@@ -61,8 +80,20 @@ class ViewController: UIViewController {
                     DispatchQueue.main.async {
                         self?.showSurveyList()
                     }
+                } else  {
+                    self?.loadingIndicator.stopAnimating()
                 }
             })
+        }
+    }
+    
+    func checkValidation() {
+        if emailTextField.text?.isEmpty == true && emailTextField.text?.count == 0 {
+            Alert.showErrorAlertWithMsg(title: "Error", msg: Constants.ErrorMessage.kEmptyEmail, showOn: self)
+            return
+        } else if passwordTextField.text?.isEmpty == true && passwordTextField.text?.count == 0 {
+            Alert.showErrorAlertWithMsg(title: "Error", msg: Constants.ErrorMessage.kPassword, showOn: self)
+            return
         }
     }
     

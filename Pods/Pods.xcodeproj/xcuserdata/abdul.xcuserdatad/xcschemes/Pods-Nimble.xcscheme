@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A1ED603519A702E566D001CE8613B84"
-               BuildableName = "Pods_Nimble.framework"
+               BuildableName = "Pods-Nimble.framework"
                BlueprintName = "Pods-Nimble"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

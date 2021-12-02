@@ -29,6 +29,7 @@ class NimbleUITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.staticTexts["Log in"]/*[[".buttons[\"Log in\"].staticTexts[\"Log in\"]",".staticTexts[\"Log in\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
     
+    // Test for swiping through images
     func test_swiping_images_of_surveys(){
         // UI tests must launch the application that they test.
         let app = XCUIApplication()

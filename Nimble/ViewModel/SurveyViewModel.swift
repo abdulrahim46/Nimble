@@ -27,7 +27,7 @@ class SurveyViewModel {
                                                     credential: credential)
         let group = DispatchGroup()
         group.enter()
-        let profileURLRequest = URLRequest(url: URL(string: "https://survey-api.nimblehq.co/api/v1/me")!)
+        let profileURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .user))!)
         sessionManager.request(profileURLRequest, interceptor: interceptor)
             .validate()
             .responseDecodable(of: ResponseData<UserProfile>.self) { (response) in
@@ -51,7 +51,7 @@ class SurveyViewModel {
                                                     credential: credential)
         let group = DispatchGroup()
         group.enter()
-        let surveyListURLRequest = URLRequest(url: URL(string: "https://survey-api.nimblehq.co/api/v1/surveys?page[number]=1&page[size]=2")!)
+        let surveyListURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .surveys))!)
         sessionManager.request(surveyListURLRequest, interceptor: interceptor)
             .validate()
             .responseDecodable(of: ResponseData<[Survey]>.self) { (response) in

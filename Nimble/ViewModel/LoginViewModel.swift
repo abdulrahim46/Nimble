@@ -18,7 +18,7 @@ class LoginViewModel {
                                             "client_id": Constants.API.apiKey,
                                             "client_secret": Constants.API.secret]
         
-        AF.request("https://survey-api.nimblehq.co/api/v1/oauth/token", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        AF.request(URLManager.getUrlString(for: .login), method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate()
             .responseDecodable(of: ResponseData<LoginCredential>.self) { (response) in
                 switch response.result {

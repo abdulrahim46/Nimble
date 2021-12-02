@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     //MARK:- View & properties
     let viewModel = LoginViewModel()
+    private(set) var loadingIndicator = UIActivityIndicatorView(style: .gray)
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
@@ -36,27 +37,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
+        setupLoadingIndicator()
+    }
+    
+    private func setupLoadingIndicator() {
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loadingIndicator)
+        NSLayoutConstraint.activate([
+            loadingIndicator.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingIndicator.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
     
     //MARK:- Action methods
     
-    @IBAction func emailTextDidChanged(_ sender: UITextField) {
-        enableLoginButton()
-    }
-    
-    @IBAction func passwordTextDidChanged(_ sender: UITextField) {
-        enableLoginButton()
-    }
-    
-    func enableLoginButton() {
-       
-    }
-    
-    
     @IBAction func loginDidTapped(_ sender: Any) {
+        loadingIndicator.startAnimating()
         if let email = emailTextField.text, let password = passwordTextField.text {
             viewModel.getAccessToken(email: email , password: password, completion: { [weak self] res in
-                print(res)
                 if res {
                     DispatchQueue.main.async {
                         self?.showSurveyList()
@@ -68,6 +68,7 @@ class ViewController: UIViewController {
     
     
     func showSurveyList() {
+        loadingIndicator.stopAnimating()
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "SurveyContainerVC") as! SurveyContainerVC
         self.navigationController?.pushViewController(vc, animated: true)

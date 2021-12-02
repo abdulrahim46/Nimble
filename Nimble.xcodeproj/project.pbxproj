@@ -38,6 +38,10 @@
 		96738990275843B300AC9280 /* LoginAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9673898B275843B300AC9280 /* LoginAPIResponse.json */; };
 		96738991275843B300AC9280 /* Survey.json in Resources */ = {isa = PBXBuildFile; fileRef = 9673898C275843B300AC9280 /* Survey.json */; };
 		967389AB275845D500AC9280 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389AA275845D500AC9280 /* MockedData.swift */; };
+		967389B0275860B800AC9280 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389AF275860B800AC9280 /* Connectivity.swift */; };
+		967389B52758614F00AC9280 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389B42758614F00AC9280 /* Alert.swift */; };
+		967389BA275861F300AC9280 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389B9275861F300AC9280 /* Extension.swift */; };
+		967389BF2758647700AC9280 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389BE2758647700AC9280 /* URLManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,10 @@
 		9673898B275843B300AC9280 /* LoginAPIResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginAPIResponse.json; sourceTree = "<group>"; };
 		9673898C275843B300AC9280 /* Survey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Survey.json; sourceTree = "<group>"; };
 		967389AA275845D500AC9280 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		967389AF275860B800AC9280 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		967389B42758614F00AC9280 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		967389B9275861F300AC9280 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		967389BE2758647700AC9280 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_NimbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C616F80CB070A9DF695CE3 /* Pods-Nimble-NimbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble-NimbleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nimble-NimbleUITests/Pods-Nimble-NimbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +233,9 @@
 			children = (
 				967388FD27563B5B00AC9280 /* LoginSession.swift */,
 				9673890727563BA100AC9280 /* Constants.swift */,
+				967389B42758614F00AC9280 /* Alert.swift */,
+				967389B9275861F300AC9280 /* Extension.swift */,
+				967389BE2758647700AC9280 /* URLManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				9673891B27563EE600AC9280 /* OAuthenticator.swift */,
+				967389AF275860B800AC9280 /* Connectivity.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -553,8 +565,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967389B52758614F00AC9280 /* Alert.swift in Sources */,
 				967389262756418600AC9280 /* SurveyViewModel.swift in Sources */,
 				967389692757DB5B00AC9280 /* SurveyDetalViewController.swift in Sources */,
+				967389B0275860B800AC9280 /* Connectivity.swift in Sources */,
 				9673890327563B8C00AC9280 /* Survey.swift in Sources */,
 				967389372757555F00AC9280 /* UserProfile.swift in Sources */,
 				9673891C27563EE600AC9280 /* OAuthenticator.swift in Sources */,
@@ -564,6 +578,8 @@
 				9673891727563E8400AC9280 /* ResponseData.swift in Sources */,
 				967388F927563B0600AC9280 /* LoginCredential.swift in Sources */,
 				9673890827563BA100AC9280 /* Constants.swift in Sources */,
+				967389BF2758647700AC9280 /* URLManager.swift in Sources */,
+				967389BA275861F300AC9280 /* Extension.swift in Sources */,
 				967389212756417600AC9280 /* LoginViewModel.swift in Sources */,
 				9673887B2751EDBA00AC9280 /* AppDelegate.swift in Sources */,
 				967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */,

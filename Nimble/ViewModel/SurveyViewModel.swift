@@ -10,34 +10,27 @@ import Alamofire
 
 class SurveyViewModel {
     
-    init() {
-        
-    }
+    //MARK:- properties
     
     let sessionManager: Session = {
-      //2
       let configuration = URLSessionConfiguration.af.default
-      //3
       configuration.timeoutIntervalForRequest = 30
-      //4
       return Session(configuration: configuration)
     }()
     
-    
+    // Get user profile data
     func getUserProfile(completion: @escaping (UserProfile?) -> ()) {
+        Connectivity.checkNetworkConnectivity()
         let credential = LoginSession.share.credential
         let authenticator = OAuthenticator()
         let interceptor = AuthenticationInterceptor(authenticator: authenticator,
                                                     credential: credential)
         let group = DispatchGroup()
-        
         group.enter()
-        let profileURLRequest = URLRequest(url: URL(string: "https://survey-api.nimblehq.co/api/v1/me")!)
+        let profileURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .user))!)
         sessionManager.request(profileURLRequest, interceptor: interceptor)
             .validate()
             .responseDecodable(of: ResponseData<UserProfile>.self) { (response) in
-                print(response.response)
-                print(response.request)
                 switch response.result {
                 case .success(let responseData):
                     completion(responseData.data)
@@ -49,27 +42,19 @@ class SurveyViewModel {
             }
     }
     
+    // get survey data from server
     func getSurveyList(completion: @escaping ([Survey]?) -> ()) {
+        Connectivity.checkNetworkConnectivity()
         let credential = LoginSession.share.credential
         let authenticator = OAuthenticator()
         let interceptor = AuthenticationInterceptor(authenticator: authenticator,
                                                     credential: credential)
-//        let session = Session()
-//        let configuration = URLSessionConfiguration.af.default
-//         //3
-//         configuration.timeoutIntervalForRequest = 30
         let group = DispatchGroup()
-        
         group.enter()
-        let surveyListURLRequest = URLRequest(url: URL(string: "https://survey-api.nimblehq.co/api/v1/surveys?page[number]=1&page[size]=2")!)
+        let surveyListURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .surveys))!)
         sessionManager.request(surveyListURLRequest, interceptor: interceptor)
             .validate()
-            .responseJSON(completionHandler: { res in
-                print(res.result)
-            })
             .responseDecodable(of: ResponseData<[Survey]>.self) { (response) in
-                print("failoojojjojo\(response.result)")
-                print(response.request)
                 switch response.result {
                 case .success(let responseData):
                     completion(responseData.data)

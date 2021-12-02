@@ -13,8 +13,6 @@ struct ResponseData<T: Codable>: Codable {
   init(jsonData: Data) throws {
     let jsonDecoder = JSONDecoder()
     let responseData = try jsonDecoder.decode(ResponseData<T>.self, from: jsonData)
-    print(T.self)
-    print(responseData)
     self = responseData
   }
 }

@@ -25,7 +25,7 @@ class SurveyContainerVC: UIViewController {
     let viewModel =  SurveyViewModel()
     
     
-    //MARK:- Lifecycles
+    //MARK:- Lifecycles methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,8 @@ class SurveyContainerVC: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    //MARK:- fetching data from server
     
     private func fetchProfile() {
         viewModel.getUserProfile(completion: { [weak self] response in
@@ -95,6 +97,7 @@ class SurveyContainerVC: UIViewController {
     }
 }
 
+//MARK: Extension for PageviewController
 
 extension SurveyContainerVC: SurveyPageViewControllerDelegate {
     func surveyPageViewController(surveyPageViewController: SurveyPageViewController, didUpdatePageIndex index: Int) {

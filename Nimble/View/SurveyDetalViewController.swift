@@ -9,6 +9,8 @@ import UIKit
 
 class SurveyDetailViewController: UIViewController {
     
+    // MARK: Lifecycle mewthods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray

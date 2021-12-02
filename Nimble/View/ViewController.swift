@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    
+    //MARK:- View & properties
+    let viewModel = LoginViewModel()
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
@@ -30,14 +31,14 @@ class ViewController: UIViewController {
         }
     }
     
-    let viewModel = LoginViewModel()
-    
+    //MARK:- Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
     }
     
+    //MARK:- Action methods
     
     @IBAction func emailTextDidChanged(_ sender: UITextField) {
         enableLoginButton()

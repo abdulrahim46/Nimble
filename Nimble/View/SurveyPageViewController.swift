@@ -9,14 +9,20 @@ import UIKit
 
 class SurveyPageViewController: UIPageViewController {
     
+    //MARK: View & properties
+    
     var surveyList: [Survey]?
     weak var surveyPageDelegate: SurveyPageViewControllerDelegate?
+    
+    //MARK: Lifecycles methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         delegate = self
     }
+    
+    //MARK:- update survey data
     
     func updatePageViewWith(_ surveyList: [Survey]) {
         self.surveyList = surveyList
@@ -42,6 +48,7 @@ class SurveyPageViewController: UIPageViewController {
     }
 }
 
+//MARK: Extension for PageviewController
 
 extension SurveyPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -67,6 +74,7 @@ extension SurveyPageViewController: UIPageViewControllerDataSource {
     
 }
 
+//MARK: Extension for PageviewController
 
 extension SurveyPageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {

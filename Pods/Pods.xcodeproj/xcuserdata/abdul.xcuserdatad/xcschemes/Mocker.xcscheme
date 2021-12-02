@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F5499438FC02BE8F3E1624B2C7C3E8B"
-               BuildableName = "Pods_Nimble_NimbleUITests.framework"
-               BlueprintName = "Pods-Nimble-NimbleUITests"
+               BlueprintIdentifier = "04AFC708359363290935C681A1CE226D"
+               BuildableName = "Mocker.framework"
+               BlueprintName = "Mocker"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

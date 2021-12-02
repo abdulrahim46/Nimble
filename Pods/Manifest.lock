@@ -3,12 +3,14 @@ PODS:
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - KeychainAccess (4.2.2)
+  - Mocker (2.2.0)
   - SkeletonView (1.20.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AlamofireImage (~> 4.1)
   - KeychainAccess
+  - Mocker (~> 2.2.0)
   - SkeletonView
 
 SPEC REPOS:
@@ -16,14 +18,16 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - KeychainAccess
+    - Mocker
     - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Mocker: d0ceb340eddd5c28539a691ce67d068674cef9a0
   SkeletonView: 8c3ba4fbbb6dc8c11b230f2293d4bad162843f04
 
-PODFILE CHECKSUM: f18090b6ee368743659b9b84e49f8b6948546cca
+PODFILE CHECKSUM: 12c1edbee7e0178c73b41dbb6a73483c85393399
 
 COCOAPODS: 1.10.1

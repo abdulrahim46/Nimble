@@ -10,6 +10,7 @@
 		3BD22CEA3FF74D9E1DE02C8A /* Pods_NimbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */; };
 		40B1FE91B7B2731C4498B080 /* Pods_Nimble_NimbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */; };
 		6CC4A26BB10AFA1434DFC062 /* Pods_Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01A2D8DD44229AF1FC0DE46 /* Pods_Nimble.framework */; };
+		962E2B84276115E500FDA1F4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E2B83276115E500FDA1F4 /* NetworkManager.swift */; };
 		9673887B2751EDBA00AC9280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673887A2751EDBA00AC9280 /* AppDelegate.swift */; };
 		9673887F2751EDBA00AC9280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673887E2751EDBA00AC9280 /* ViewController.swift */; };
 		967388822751EDBA00AC9280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967388802751EDBA00AC9280 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		38C5B620ABB7E728E992E227 /* Pods-NimbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleTests/Pods-NimbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D71C4DDF176AD590801C401 /* Pods-NimbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleTests.release.xcconfig"; path = "Target Support Files/Pods-NimbleTests/Pods-NimbleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8ED3D88DEE0D4BD57BC94C08 /* Pods-Nimble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble.debug.xcconfig"; path = "Target Support Files/Pods-Nimble/Pods-Nimble.debug.xcconfig"; sourceTree = "<group>"; };
+		962E2B83276115E500FDA1F4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		967388772751EDBA00AC9280 /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9673887A2751EDBA00AC9280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9673887E2751EDBA00AC9280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				9673891B27563EE600AC9280 /* OAuthenticator.swift */,
 				967389AF275860B800AC9280 /* Connectivity.swift */,
+				962E2B83276115E500FDA1F4 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				967389B52758614F00AC9280 /* Alert.swift in Sources */,
 				967389262756418600AC9280 /* SurveyViewModel.swift in Sources */,
 				967389692757DB5B00AC9280 /* SurveyDetalViewController.swift in Sources */,
+				962E2B84276115E500FDA1F4 /* NetworkManager.swift in Sources */,
 				967389B0275860B800AC9280 /* Connectivity.swift in Sources */,
 				9673890327563B8C00AC9280 /* Survey.swift in Sources */,
 				967389372757555F00AC9280 /* UserProfile.swift in Sources */,

@@ -25,7 +25,7 @@ class NetworkManager {
         return Session(configuration: configuration)
     }()
     
-    @discardableResult static func request<T:Codable>(urlName:ServiceURLType, method: HTTPMethod, parameters:[String:Any]?, returnType:ResponseData<T>.Type, withResponse requestResponse:@escaping APIResponseClosure, failure:@escaping APIFailureClosure) -> DataRequest? {
+    static func request<T:Codable>(urlName:ServiceURLType, method: HTTPMethod, parameters:[String:Any]?, returnType:T.Type, withResponse requestResponse:@escaping APIResponseClosure, failure:@escaping APIFailureClosure) {
         Connectivity.checkNetworkConnectivity()
         
         // Further Code will execute only when there is Internet Connection Available
@@ -36,39 +36,34 @@ class NetworkManager {
             interceptor = AuthenticationInterceptor(authenticator: authenticator, credential: credential)
         }
         
-        var dataRequest:DataRequest? = nil
-        
-        dataRequest = sessionManager.request(urlString, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: nil, interceptor: interceptor, requestModifier: nil)
+        sessionManager.request(urlString, interceptor: interceptor)
             .validate()
-        
-        dataRequest?.responseJSON(completionHandler: { response in
-            switch response.result {
-            case .success( _):
-                if [200, 201, 202, 203, 204].contains(response.response?.statusCode) {
-                    do {
-                        //print("response data==========>>>>>\(response.result)")
-                        let jsonDecoder = JSONDecoder()
-                        let returnObject = try jsonDecoder.decode(returnType, from: response.data!)
-                        #if DEBUG
-                        debugPrint("result: ==> suceess: \(returnObject)")
-                        #endif
-                        requestResponse(returnObject)
-                    } catch let exception {
-                        #if DEBUG
-                        debugPrint("Error: ==> Exception: \(exception)")
-                        #endif
-                        requestResponse(nil)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success( _):
+                    if [200, 201, 202, 203, 204].contains(response.response?.statusCode) {
+                        do {
+                            //print("response data==========>>>>>\(response.result)")
+                            let jsonDecoder = JSONDecoder()
+                            let returnObject = try jsonDecoder.decode(returnType, from: response.data!)
+                            #if DEBUG
+                            debugPrint("result: ==> suceess: \(returnObject)")
+                            #endif
+                            requestResponse(returnObject)
+                        } catch let exception {
+                            #if DEBUG
+                            debugPrint("Error: ==> Exception: \(exception)")
+                            #endif
+                            requestResponse(nil)
+                        }
+                    } else {
+                        //print("hgjhjhghjgjhg======\(response.result)")
                     }
+                    
+                case .failure(let error):
+                    print(error)
+                    failure(error.responseCode, nil)
                 }
-                
-            case .failure(let error):
-                print(error)
-                failure(90, nil)
-            }
-        })
-        
-        return dataRequest
+            })
     }
-    
-    
 }

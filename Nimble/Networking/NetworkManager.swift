@@ -46,6 +46,7 @@ class NetworkManager {
                             //print("response data==========>>>>>\(response.result)")
                             let jsonDecoder = JSONDecoder()
                             let returnObject = try jsonDecoder.decode(returnType, from: response.data!)
+                            
                             #if DEBUG
                             debugPrint("result: ==> suceess: \(returnObject)")
                             #endif

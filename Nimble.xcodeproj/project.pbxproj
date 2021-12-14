@@ -45,6 +45,7 @@
 		96CDBEBE2768EF9800452941 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBEBD2768EF9800452941 /* DataProvider.swift */; };
 		96CDBECA2768F8E400452941 /* APIMockResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBEC92768F8E400452941 /* APIMockResources.swift */; };
 		96CDBED527691E6D00452941 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBED427691E6D00452941 /* LoginViewModelTests.swift */; };
+		96CDBEE02769245700452941 /* SurveyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBEDF2769245700452941 /* SurveyViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		96CDBEBD2768EF9800452941 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		96CDBEC92768F8E400452941 /* APIMockResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMockResources.swift; sourceTree = "<group>"; };
 		96CDBED427691E6D00452941 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		96CDBEDF2769245700452941 /* SurveyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModelTests.swift; sourceTree = "<group>"; };
 		9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_NimbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C616F80CB070A9DF695CE3 /* Pods-Nimble-NimbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble-NimbleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nimble-NimbleUITests/Pods-Nimble-NimbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				967388912751EDC200AC9280 /* NimbleTests.swift */,
 				967388932751EDC200AC9280 /* Info.plist */,
 				96CDBED427691E6D00452941 /* LoginViewModelTests.swift */,
+				96CDBEDF2769245700452941 /* SurveyViewModelTests.swift */,
 			);
 			path = NimbleTests;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				96CDBECA2768F8E400452941 /* APIMockResources.swift in Sources */,
 				967388922751EDC200AC9280 /* NimbleTests.swift in Sources */,
 				96CDBED527691E6D00452941 /* LoginViewModelTests.swift in Sources */,
+				96CDBEE02769245700452941 /* SurveyViewModelTests.swift in Sources */,
 				967389AB275845D500AC9280 /* MockedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

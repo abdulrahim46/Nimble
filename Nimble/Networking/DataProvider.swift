@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol DataProvider {
     func requestLogin(email: String, password: String, completion: @escaping (LoginCredential?) -> ())
     func requestUserProfile(completion: @escaping (UserProfile?) -> ())
-    func requestSurveys(completion: @escaping ([Survey]?) -> ())
+    func requestSurveys(completion: @escaping ([Survey]?) -> (), failure: @escaping (AFError?) -> ())
 }

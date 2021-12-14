@@ -16,10 +16,12 @@ class LoginViewModel {
         self.apiResource = apiResource
     }
     
-    func getAccessToken(email:  String, password: String, completion: @escaping (LoginCredential) -> ()) {
+    func getAccessToken(email:  String, password: String, completion: @escaping (Bool) -> ()) {
         apiResource.requestLogin(email: email, password: password, completion: { response in
-            if let result = response {
-                completion(result)
+            if let _ = response {
+                completion(true)
+            } else {
+                completion(false)
             }
         })
     }

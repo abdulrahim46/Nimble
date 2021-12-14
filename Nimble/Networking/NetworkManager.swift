@@ -66,7 +66,7 @@ class NetworkManager: DataProvider {
     }
     
     
-    func requestSurveys(completion: @escaping ([Survey]?) -> ()) {
+    func requestSurveys(completion: @escaping ([Survey]?) -> (), failure: @escaping (AFError?) -> ()) {
         let group = DispatchGroup()
         group.enter()
         let surveyListURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .surveys))!)
@@ -79,6 +79,7 @@ class NetworkManager: DataProvider {
                     
                 case .failure(let error):
                     print(error)
+                    failure(error)
                 }
                 group.leave()
             }

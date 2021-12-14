@@ -19,7 +19,6 @@
 		967388922751EDC200AC9280 /* NimbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388912751EDC200AC9280 /* NimbleTests.swift */; };
 		9673889D2751EDC200AC9280 /* NimbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673889C2751EDC200AC9280 /* NimbleUITests.swift */; };
 		967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388B62751F0A500AC9280 /* SceneDelegate.swift */; };
-		967388C32752882400AC9280 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388C22752882400AC9280 /* LoginViewControllerTest.swift */; };
 		967388DD27562CCD00AC9280 /* SurveyContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388DC27562CCD00AC9280 /* SurveyContainerVC.swift */; };
 		967388E227562CFC00AC9280 /* SurveyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388E127562CFC00AC9280 /* SurveyPageViewController.swift */; };
 		967388E727562D0900AC9280 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967388E627562D0900AC9280 /* SurveyViewController.swift */; };
@@ -44,6 +43,8 @@
 		967389BA275861F300AC9280 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389B9275861F300AC9280 /* Extension.swift */; };
 		967389BF2758647700AC9280 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389BE2758647700AC9280 /* URLManager.swift */; };
 		96CDBEBE2768EF9800452941 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBEBD2768EF9800452941 /* DataProvider.swift */; };
+		96CDBECA2768F8E400452941 /* APIMockResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBEC92768F8E400452941 /* APIMockResources.swift */; };
+		96CDBED527691E6D00452941 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBED427691E6D00452941 /* LoginViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +85,6 @@
 		9673889C2751EDC200AC9280 /* NimbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleUITests.swift; sourceTree = "<group>"; };
 		9673889E2751EDC200AC9280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967388B62751F0A500AC9280 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		967388C22752882400AC9280 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		967388DC27562CCD00AC9280 /* SurveyContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyContainerVC.swift; sourceTree = "<group>"; };
 		967388E127562CFC00AC9280 /* SurveyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageViewController.swift; sourceTree = "<group>"; };
 		967388E627562D0900AC9280 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +109,8 @@
 		967389B9275861F300AC9280 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		967389BE2758647700AC9280 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		96CDBEBD2768EF9800452941 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		96CDBEC92768F8E400452941 /* APIMockResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMockResources.swift; sourceTree = "<group>"; };
+		96CDBED427691E6D00452941 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_NimbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C616F80CB070A9DF695CE3 /* Pods-Nimble-NimbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble-NimbleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nimble-NimbleUITests/Pods-Nimble-NimbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,10 +209,11 @@
 		967388902751EDC200AC9280 /* NimbleTests */ = {
 			isa = PBXGroup;
 			children = (
+				96CDBEC82768F8C200452941 /* Services */,
 				96738987275843B300AC9280 /* Resources */,
 				967388912751EDC200AC9280 /* NimbleTests.swift */,
 				967388932751EDC200AC9280 /* Info.plist */,
-				967388C22752882400AC9280 /* LoginViewControllerTest.swift */,
+				96CDBED427691E6D00452941 /* LoginViewModelTests.swift */,
 			);
 			path = NimbleTests;
 			sourceTree = "<group>";
@@ -308,6 +311,14 @@
 				967389AA275845D500AC9280 /* MockedData.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		96CDBEC82768F8C200452941 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				96CDBEC92768F8E400452941 /* APIMockResources.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,8 +611,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				967388C32752882400AC9280 /* LoginViewControllerTest.swift in Sources */,
+				96CDBECA2768F8E400452941 /* APIMockResources.swift in Sources */,
 				967388922751EDC200AC9280 /* NimbleTests.swift in Sources */,
+				96CDBED527691E6D00452941 /* LoginViewModelTests.swift in Sources */,
 				967389AB275845D500AC9280 /* MockedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

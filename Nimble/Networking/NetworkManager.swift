@@ -13,8 +13,8 @@ class NetworkManager: DataProvider {
     //MARK:- properties
     
     var interceptor: RequestInterceptor?
-    static let credential = LoginSession.share.credential
-    static let authenticator = OAuthenticator()
+    let credential = LoginSession.share.credential
+    let authenticator = OAuthenticator()
     
     let sessionManager: Session = {
         let configuration = URLSessionConfiguration.af.default
@@ -48,6 +48,7 @@ class NetworkManager: DataProvider {
     
     
     func requestUserProfile(completion: @escaping (UserProfile?) -> ()) {
+        interceptor = AuthenticationInterceptor(authenticator: authenticator, credential: credential)
         let group = DispatchGroup()
         group.enter()
         let profileURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .user))!)
@@ -67,6 +68,7 @@ class NetworkManager: DataProvider {
     
     
     func requestSurveys(completion: @escaping ([Survey]?) -> (), failure: @escaping (AFError?) -> ()) {
+        interceptor = AuthenticationInterceptor(authenticator: authenticator, credential: credential)
         let group = DispatchGroup()
         group.enter()
         let surveyListURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .surveys))!)

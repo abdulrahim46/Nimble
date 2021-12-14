@@ -43,6 +43,7 @@
 		967389B52758614F00AC9280 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389B42758614F00AC9280 /* Alert.swift */; };
 		967389BA275861F300AC9280 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389B9275861F300AC9280 /* Extension.swift */; };
 		967389BF2758647700AC9280 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967389BE2758647700AC9280 /* URLManager.swift */; };
+		96CDBEBE2768EF9800452941 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDBEBD2768EF9800452941 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		967389B42758614F00AC9280 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		967389B9275861F300AC9280 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		967389BE2758647700AC9280 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		96CDBEBD2768EF9800452941 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		9FBBFA85A85D97899BB5E734 /* Pods_Nimble_NimbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nimble_NimbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E70565F7419A36033437E9 /* Pods_NimbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C616F80CB070A9DF695CE3 /* Pods-Nimble-NimbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimble-NimbleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nimble-NimbleUITests/Pods-Nimble-NimbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				9673891B27563EE600AC9280 /* OAuthenticator.swift */,
 				967389AF275860B800AC9280 /* Connectivity.swift */,
 				962E2B83276115E500FDA1F4 /* NetworkManager.swift */,
+				96CDBEBD2768EF9800452941 /* DataProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				9673890827563BA100AC9280 /* Constants.swift in Sources */,
 				967389BF2758647700AC9280 /* URLManager.swift in Sources */,
 				967389BA275861F300AC9280 /* Extension.swift in Sources */,
+				96CDBEBE2768EF9800452941 /* DataProvider.swift in Sources */,
 				967389212756417600AC9280 /* LoginViewModel.swift in Sources */,
 				9673887B2751EDBA00AC9280 /* AppDelegate.swift in Sources */,
 				967388B72751F0A500AC9280 /* SceneDelegate.swift in Sources */,

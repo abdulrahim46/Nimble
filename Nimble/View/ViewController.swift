@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         loadingIndicator.startAnimating()
         if let email = emailTextField.text, let password = passwordTextField.text {
             viewModel.getAccessToken(email: email , password: password, completion: { [weak self] res in
-                if res {
+                if res != nil {
                     DispatchQueue.main.async {
                         self?.showSurveyList()
                     }

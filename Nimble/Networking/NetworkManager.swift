@@ -8,24 +8,21 @@
 import Foundation
 import Alamofire
 
-class NetworkManager {
-    
-    typealias APIResponseClosure = (Decodable?) ->()
-    typealias APIFailureClosure = (Int?, Decodable?) -> ()
+class NetworkManager: DataProvider {
     
     //MARK:- properties
     
-    static var interceptor: RequestInterceptor?
+    var interceptor: RequestInterceptor?
     static let credential = LoginSession.share.credential
     static let authenticator = OAuthenticator()
     
-    static let sessionManager: Session = {
+    let sessionManager: Session = {
         let configuration = URLSessionConfiguration.af.default
         configuration.timeoutIntervalForRequest = 30
         return Session(configuration: configuration)
     }()
     
-    static func requestLogin(email: String, password: String, completion: @escaping (LoginCredential?) -> ()) {
+    func requestLogin(email: String, password: String, completion: @escaping (LoginCredential?) -> ()) {
         Connectivity.checkNetworkConnectivity()
         let parameters: [String: String] = ["grant_type": "password",
                                             "email": email,
@@ -48,9 +45,9 @@ class NetworkManager {
                 }
             }
     }
-
     
-    static func requestUserProfile(completion: @escaping (UserProfile?) -> ()) {
+    
+    func requestUserProfile(completion: @escaping (UserProfile?) -> ()) {
         let group = DispatchGroup()
         group.enter()
         let profileURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .user))!)
@@ -69,7 +66,7 @@ class NetworkManager {
     }
     
     
-    static func requestSurverys(completion: @escaping ([Survey]?) -> ()) {
+    func requestSurveys(completion: @escaping ([Survey]?) -> ()) {
         let group = DispatchGroup()
         group.enter()
         let surveyListURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .surveys))!)
@@ -79,7 +76,7 @@ class NetworkManager {
                 switch response.result {
                 case .success(let responseData):
                     completion(responseData.data)
-
+                    
                 case .failure(let error):
                     print(error)
                 }

@@ -25,46 +25,65 @@ class NetworkManager {
         return Session(configuration: configuration)
     }()
     
-    static func request<T:Codable>(urlName:ServiceURLType, method: HTTPMethod, parameters:[String:Any]?, returnType:T.Type, withResponse requestResponse:@escaping APIResponseClosure, failure:@escaping APIFailureClosure) {
+    static func requestLogin(email: String, password: String, completion: @escaping (LoginCredential?) -> ()) {
         Connectivity.checkNetworkConnectivity()
-        
-        // Further Code will execute only when there is Internet Connection Available
-        let urlString = URLManager.getUrlString(for: urlName)
-        //var urlComponents = URLComponents.init(string: urlString)
-        
-        if urlName != .login {
-            interceptor = AuthenticationInterceptor(authenticator: authenticator, credential: credential)
-        }
-        
-        sessionManager.request(urlString, interceptor: interceptor)
+        let parameters: [String: String] = ["grant_type": "password",
+                                            "email": email,
+                                            "password": password,
+                                            "client_id": Constants.API.apiKey,
+                                            "client_secret": Constants.API.secret]
+        let group = DispatchGroup()
+        group.enter()
+        AF.request(URLManager.getUrlString(for: .login), method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate()
-            .responseJSON(completionHandler: { response in
+            .responseDecodable(of: ResponseData<LoginCredential>.self) { (response) in
                 switch response.result {
-                case .success( _):
-                    if [200, 201, 202, 203, 204].contains(response.response?.statusCode) {
-                        do {
-                            //print("response data==========>>>>>\(response.result)")
-                            let jsonDecoder = JSONDecoder()
-                            let returnObject = try jsonDecoder.decode(returnType, from: response.data!)
-                            
-                            #if DEBUG
-                            debugPrint("result: ==> suceess: \(returnObject)")
-                            #endif
-                            requestResponse(returnObject)
-                        } catch let exception {
-                            #if DEBUG
-                            debugPrint("Error: ==> Exception: \(exception)")
-                            #endif
-                            requestResponse(nil)
-                        }
-                    } else {
-                        //print("hgjhjhghjgjhg======\(response.result)")
-                    }
+                case .success(let responseData):
+                    print(responseData)
+                    LoginSession.share.credential = responseData.data
+                    completion(responseData.data)
+                case .failure(let error):
+                    print(error)
+                    completion(nil)
+                }
+            }
+    }
+
+    
+    static func requestUserProfile(completion: @escaping (UserProfile?) -> ()) {
+        let group = DispatchGroup()
+        group.enter()
+        let profileURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .user))!)
+        sessionManager.request(profileURLRequest, interceptor: interceptor)
+            .validate()
+            .responseDecodable(of: ResponseData<UserProfile>.self) { (response) in
+                switch response.result {
+                case .success(let responseData):
+                    completion(responseData.data)
                     
                 case .failure(let error):
                     print(error)
-                    failure(error.responseCode, nil)
                 }
-            })
+                group.leave()
+            }
+    }
+    
+    
+    static func requestSurverys(completion: @escaping ([Survey]?) -> ()) {
+        let group = DispatchGroup()
+        group.enter()
+        let surveyListURLRequest = URLRequest(url: URL(string: URLManager.getUrlString(for: .surveys))!)
+        sessionManager.request(surveyListURLRequest, interceptor: interceptor)
+            .validate()
+            .responseDecodable(of: ResponseData<[Survey]>.self) { (response) in
+                switch response.result {
+                case .success(let responseData):
+                    completion(responseData.data)
+
+                case .failure(let error):
+                    print(error)
+                }
+                group.leave()
+            }
     }
 }

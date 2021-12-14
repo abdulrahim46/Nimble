@@ -18,11 +18,7 @@ class LoginViewModel {
                                             "password": password,
                                             "client_id": Constants.API.apiKey,
                                             "client_secret": Constants.API.secret]
-        NetworkManager.request(urlName: .login, method: .post, parameters: parameters, returnType: ResponseData<LoginCredential>.self, withResponse: { response in
-            completion(true)
-        }, failure: { status, error in
-            completion(false)
-        })
+
     }
     
 //    func getAccessToken(email:  String, password: String, completion: @escaping (Bool) -> ()) {

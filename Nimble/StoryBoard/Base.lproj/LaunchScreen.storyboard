@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="LDE-61-ozb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="LDE-61-ozb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nimble-logo" translatesAutoresizingMaskIntoConstraints="NO" id="U57-ca-Dzg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SigninLogo" translatesAutoresizingMaskIntoConstraints="NO" id="U57-ca-Dzg">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6Sx-g6-FIa"/>
@@ -47,8 +47,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="375" height="812"/>
-        <image name="nimble-logo" width="202" height="48"/>
+        <image name="SigninLogo" width="168" height="40"/>
+        <image name="Splash" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

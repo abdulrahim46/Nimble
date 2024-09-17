@@ -12,9 +12,9 @@ public struct Constants {
     //MARK:- Apikey for requests
     
     struct API {
-        static let apiKey = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE"
-        static let secret = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU"
-        static let password = "password"
+        static let apiKey = ""
+        static let secret = ""
+        static let password = ""
     }
     
     // MARK:- Common Error messages
